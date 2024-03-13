@@ -6,6 +6,12 @@ EXTERNPROTO "webots://projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "webots://projects/appearances/protos/Soil.proto"
 EXTERNPROTO "webots://projects/objects/floors/protos/UnevenTerrain.proto"
 EXTERNPROTO "webots://projects/vehicles/protos/generic/Tractor.proto"
+EXTERNPROTO "webots://projects/objects/rocks/protos/Rock.proto"
+EXTERNPROTO "webots://projects/objects/trees/protos/Oak.proto"
+EXTERNPROTO "webots://projects/objects/trees/protos/Forest.proto"
+EXTERNPROTO "webots://projects/objects/buildings/protos/Windmill.proto"
+EXTERNPROTO "webots://projects/objects/road/protos/Road.proto"
+EXTERNPROTO "webots://projects/objects/road/protos/RoadLine.proto"
 
 WorldInfo {
   contactProperties [
@@ -15,8 +21,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.16957738226408292 0.04813230679283996 0.9843407908175201 1.8180886356834496
-  position 7.337744263046708 -39.861943827504774 14.836659947019934
+  orientation -0.21804387444783202 0.518765203026756 0.8266435343873361 0.9407945842352711
+  position -49.19527026962385 -73.3399725737583 68.83720438177768
   follow "vehicle"
   followType "Mounted Shot"
 }
@@ -43,32 +49,104 @@ UnevenTerrain {
   }
   perlinNOctaves 5
 }
+Group {
+  children [
+    Rock {
+      translation 9.65 -15.6942 15.1934
+      rotation 0.24029896869805767 0.37146795161165913 0.8968098831793103 2.94318
+      name "rock(4)"
+      scale 6
+    }
+    Road {
+      lines [
+        RoadLine {
+          type "none"
+        }
+      ]
+      rightBorder FALSE
+      leftBorder FALSE
+      bottom TRUE
+      wayPoints [
+        -100 8 16.5
+        -75 8 13
+        -62 8 10.9
+        -50 8 14.1
+        0 0 16
+        30 0 17.5
+        60 10 19
+        100 18 16
+      ]
+      castShadows TRUE
+    }
+    Windmill {
+      translation 0 23.23 17.28
+      rotation 0 0 1 -0.523595307179586
+    }
+    Forest {
+      translation 36.41 -17.1574 15.3703
+      rotation -1 0 0 -0.07
+      density 0.15
+      type "oak tree"
+      maxHeight 9
+      minHeight 1
+    }
+    Oak {
+      translation 19.3838 -19.1153 15.41
+      rotation 0 0 -1 -1.0472053071795866
+      name "oak tree(2)"
+    }
+    Oak {
+      translation 13.3078 -20.7444 14.02
+      rotation 0 0 1 1.8326
+      name "oak tree(1)"
+    }
+    Rock {
+      translation 9.65 -26.5061 13.2339
+      rotation 1 0 0 2.3562
+      name "rock(3)"
+      scale 6
+    }
+    Oak {
+      translation 20.54 -27.46 14.02
+    }
+    Rock {
+      translation 18.22 -30.16 13.69
+      name "rock(2)"
+      type "flat"
+      scale 6
+    }
+    Rock {
+      translation 15.45 -30.16 13.72
+      name "rock(1)"
+      type "flat"
+      scale 3
+    }
+    Rock {
+      translation 13.3 -25.56 14.18
+      scale 6
+    }
+  ]
+}
 Tractor {
-  hidden position_0_0 0.2687894722730799
-  hidden position2_0_0 242.28476566308407
-  hidden position_0_1 0.3390992439663034
-  hidden position2_0_1 491.98996602699725
-  hidden position_0_2 2540.5598979402766
-  hidden position_0_3 2511.0615953960287
-  hidden linearVelocity_0 0.02791585096106803 0.008623263699226665 0.003837714923869926
-  hidden angularVelocity_0 0.0006067058240758144 -0.00018182648650001874 -0.0038469699420299974
+  hidden linearVelocity_0 -0.044391146551645395 -0.02972287734546268 -0.033468191899454935
+  hidden angularVelocity_0 0.01084224998288503 0.002167409030359185 0.012379660978592975
   hidden translation_1 0 0 0
-  hidden rotation_1 -0.7900684336712251 -0.6018630912318197 -0.11641601921202799 3.444883559912395
-  hidden linearVelocity_1 0.031689031210142785 0.007240297578307642 0.004490825793840257
-  hidden angularVelocity_1 -0.01709893389711471 0.08466483406487552 -0.002329426500834129
+  hidden rotation_1 -0.7901064283250577 -0.6018758101420766 0.11609195099247466 2.839125159642822
+  hidden linearVelocity_1 -0.057523445193597915 -0.021905020224449852 -0.01948693069898508
+  hidden angularVelocity_1 0.061612749451375 -0.15545967096247829 0.01142591780568731
   hidden translation_2 0 0 0
-  hidden rotation_2 0.7546245201659991 0.5340156397391091 0.38127303875079516 2.1532197140399747
-  hidden linearVelocity_2 0.027199953073658988 0.004833040253021688 0.003905742697503126
-  hidden angularVelocity_2 -0.009344105171477731 0.07281398776933269 -0.002291290883588486
+  hidden rotation_2 0.6861098206056531 0.485518552129296 0.5417795212138891 1.8347601944127356
+  hidden linearVelocity_2 -0.04455278892920764 -0.013630242173772254 -0.024934988892094043
+  hidden angularVelocity_2 0.04187261307377913 -0.12419744075594256 0.011100456048857267
   hidden translation_3 0 0 0
-  hidden rotation_3 -0.660760411520714 -0.6607579844166558 0.3560822441467914 2.4574289942619707
-  hidden linearVelocity_3 0.028604974110004677 0.013238484391281202 0.0036533955445536325
-  hidden angularVelocity_3 -0.024974052149663712 0.049659340770042325 -0.0036053881371109846
+  hidden rotation_3 -0.6404470401105301 -0.6404446876215144 0.42386105142020497 2.339784188500038
+  hidden linearVelocity_3 -0.046471983959163854 -0.039751043730155394 -0.012489193754976062
+  hidden angularVelocity_3 0.06392832122395488 -0.07893134000495139 0.013140132488514492
   hidden translation_4 0 0 0
-  hidden rotation_4 -0.6665036756009499 -0.6665012274007439 0.3339894673245333 2.4969129435683444
-  hidden linearVelocity_4 0.02410249055928816 0.010925765466398816 0.0032286957113937136
-  hidden angularVelocity_4 -0.02495787909690549 0.049634980376627724 -0.0035866631938252748
-  translation 4.0799223221397245 -32.43764853217259 12.297405296075585
-  rotation 0.034334230718641466 -0.10380409371992484 0.9940049651425007 0.4767680480921991
+  hidden rotation_4 -0.5948527670448283 -0.594850582032622 0.540650506884588 2.150322185614235
+  hidden linearVelocity_4 -0.024861551034425312 -0.02851177158914345 -0.17137872163939238
+  hidden angularVelocity_4 0.051927449092375406 -0.054260391421802855 0.011369386320300956
+  translation 3.923857670017196 -32.66569756085024 12.264809154071648
+  rotation 0.012473900772502627 -0.08796074621511962 0.99604583675893 0.5848182863021489
   controller "ros_automobile"
 }
