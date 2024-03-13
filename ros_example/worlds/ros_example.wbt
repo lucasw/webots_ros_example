@@ -1,0 +1,18 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "webots://projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "webots://projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "webots://projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.2952166629675586 0.25653266287177784 0.9203467361740431 1.7924274409152454
+  position 0.32543053290622204 -2.5040280113217346 2.029864750253321
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
