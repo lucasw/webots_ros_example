@@ -2,17 +2,21 @@
 
 EXTERNPROTO "webots://projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "webots://projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
-EXTERNPROTO "webots://projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "webots://projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "webots://projects/appearances/protos/Soil.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2952166629675586 0.25653266287177784 0.9203467361740431 1.7924274409152454
-  position 0.32543053290622204 -2.5040280113217346 2.029864750253321
+  orientation -0.02109334895529682 0.032334428540581876 0.9992544997951244 1.7105280722402776
+  position 0.39599255613617046 -2.7112057104806615 0.42821255022995186
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
-RectangleArena {
+Floor {
+  size 1000 1000
+  appearance Soil {
+  }
 }
