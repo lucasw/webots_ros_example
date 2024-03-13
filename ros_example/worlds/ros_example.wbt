@@ -4,12 +4,13 @@ EXTERNPROTO "webots://projects/objects/backgrounds/protos/TexturedBackground.pro
 EXTERNPROTO "webots://projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "webots://projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "webots://projects/appearances/protos/Soil.proto"
+EXTERNPROTO "webots://projects/objects/floors/protos/UnevenTerrain.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.02109334895529682 0.032334428540581876 0.9992544997951244 1.7105280722402776
-  position 0.39599255613617046 -2.7112057104806615 0.42821255022995186
+  orientation -0.05353672450781134 0.07581828048568696 0.9956833871633937 1.4883985745252817
+  position 0.3169500248851609 -58.07023950334529 26.67330123303278
 }
 TexturedBackground {
 }
@@ -19,4 +20,15 @@ Floor {
   size 1000 1000
   appearance Soil {
   }
+}
+UnevenTerrain {
+  size 200 200 25
+  xDimension 100
+  yDimension 100
+  appearance Soil {
+    textureTransform TextureTransform {
+      scale 150 150
+    }
+  }
+  perlinNOctaves 5
 }
