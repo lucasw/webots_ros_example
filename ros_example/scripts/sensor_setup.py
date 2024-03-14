@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 """
 enable and configure webots robot sensors
+
+The namespace is specified by vehicle | controllerArgs --name=webots
+./sensor_setup.py __ns:=/webots
+
 """
 
 import rospy
